@@ -1,0 +1,332 @@
+.kadin-hero{
+    background:linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)), 
+                url("../gorseller/blog.jpg");
+    background-size:cover;
+    background-position:center;
+    min-height:350px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    text-align:center;
+    padding:40px;
+}
+
+.kadin-hero h1{
+    font-size:48px;
+    margin-bottom:15px;
+}
+
+.kadin-hero p{
+    font-size:18px;
+    margin-bottom:25px;
+}
+
+.kadin-cizgi{
+    width:100px;
+    height:3px;
+    background:white;
+}
+
+.kadin-filtre-ust{
+    background:white;
+    padding:20px 60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid #eee;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.filtre-toggle{
+    background:none;
+    border:none;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:bold;
+    display:flex;
+    gap:10px;
+    align-items:center;
+}
+
+.sirala-form{
+    display:flex;
+    gap:12px;
+    align-items:center;
+}
+
+.sirala-form select{
+    padding:10px 15px;
+    border:1px solid #ccc;
+    border-radius:6px;
+}
+
+.kadin-filtreler{
+    background:white;
+    padding:30px 60px;
+    max-width:220px;
+    min-height:400px;
+}
+
+.kadin-filtreler.gizli{
+    display:none;
+}
+
+.filter-form{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.filter-box{
+    border:1px solid #ddd;
+    border-radius:8px;
+    padding:15px;
+}
+
+.filter-box summary{
+    font-weight:bold;
+    cursor:pointer;
+    user-select:none;
+}
+
+.filter-box label{
+    display:block;
+    margin:10px 0;
+}
+
+.filter-box input[type="checkbox"],
+.filter-box input[type="number"]{
+    margin-right:8px;
+}
+
+.filter-box input[type="number"]{
+    width:100%;
+    padding:8px;
+    border:1px solid #ccc;
+    border-radius:6px;
+    margin-top:5px;
+}
+
+.filter-submit,
+.filter-clear{
+    padding:12px;
+    border-radius:8px;
+    text-align:center;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.filter-submit{
+    background:#111;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+
+.filter-clear{
+    background:white;
+    color:#111;
+    border:1px solid #111;
+}
+
+.kadin-urun-alani{
+    padding:40px 60px;
+    min-height:500px;
+}
+
+.kadin-grid{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:24px;
+}
+
+.kadin-kart{
+    position:relative;
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    transition:.3s;
+    box-shadow:0 4px 12px rgba(0,0,0,.06);
+}
+
+.kadin-kart:hover{
+    transform:translateY(-4px);
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+}
+
+.kadin-resim{
+    position:relative;
+    height:350px;
+    overflow:hidden;
+    background:#f5f5f5;
+}
+
+.kadin-resim img{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.4s;
+}
+
+.hover-resim .resim-2{
+    opacity:0;
+}
+
+.kadin-kart:hover .resim-2{
+    opacity:1;
+}
+
+.kadin-kart:hover .resim-1{
+    opacity:0;
+}
+
+.favori-btn{
+    position:absolute;
+    top:12px;
+    right:12px;
+    width:44px;
+    height:44px;
+    border-radius:50%;
+    background:white;
+    border:none;
+    font-size:22px;
+    cursor:pointer;
+    z-index:5;
+    box-shadow:0 4px 12px rgba(0,0,0,.15);
+    transition:.2s;
+}
+
+.favori-btn:hover{
+    transform:scale(1.1);
+}
+
+.favori-btn.favori-aktif{
+    color:#c60000;
+    background:#111;
+    color:white;
+}
+
+.kadin-bilgi{
+    padding:18px;
+}
+
+.kadin-bilgi h3{
+    font-size:16px;
+    margin:0 0 10px;
+    min-height:40px;
+}
+
+.kadin-bilgi p{
+    font-size:18px;
+    font-weight:bold;
+    margin:10px 0;
+}
+
+.kadin-bilgi a{
+    display:block;
+    text-align:center;
+    padding:10px;
+    margin:8px 0;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:14px;
+    transition:.2s;
+}
+
+.kadin-bilgi a:first-of-type{
+    background:#111;
+    color:white;
+}
+
+.kadin-bilgi a:first-of-type:hover{
+    background:#333;
+}
+
+.sepete-ekle-btn{
+    border:1px solid #111;
+    color:#111;
+    background:white;
+}
+
+.sepete-ekle-btn:hover{
+    background:#f5f5f5;
+}
+
+.fiyat-alani{
+    margin:10px 0;
+}
+
+.eski-fiyat{
+    display:block;
+    text-decoration:line-through;
+    color:#999;
+    font-size:14px;
+}
+
+.yeni-fiyat{
+    display:block;
+    font-size:18px;
+    font-weight:bold;
+    color:#111;
+}
+
+.indirim-etiket{
+    position:absolute;
+    top:12px;
+    left:12px;
+    background:#c60000;
+    color:white;
+    padding:8px 14px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:bold;
+    z-index:4;
+}
+
+@media(max-width:1200px){
+    .kadin-grid{
+        grid-template-columns:repeat(3, 1fr);
+    }
+
+    .kadin-resim{
+        height:300px;
+    }
+}
+
+@media(max-width:900px){
+    .kadin-hero{
+        min-height:250px;
+        padding:25px;
+    }
+
+    .kadin-hero h1{
+        font-size:32px;
+    }
+
+    .kadin-filtre-ust,
+    .kadin-filtreler,
+    .kadin-urun-alani{
+        padding:20px;
+    }
+
+    .kadin-grid{
+        grid-template-columns:repeat(2, 1fr);
+        gap:16px;
+    }
+}
+
+@media(max-width:600px){
+    .kadin-grid{
+        grid-template-columns:1fr;
+    }
+
+    .kadin-resim{
+        height:280px;
+    }
+}
