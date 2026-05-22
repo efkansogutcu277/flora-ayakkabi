@@ -1,0 +1,180 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    color:#111;
+}
+
+a{
+    color:inherit;
+}
+
+.marquee-bar{
+    background:#111;
+    color:white;
+    padding:12px 0;
+    overflow:hidden;
+}
+
+.marquee-track{
+    display:flex;
+    gap:40px;
+    animation:scroll 20s linear infinite;
+    white-space:nowrap;
+}
+
+@keyframes scroll{
+    0%{transform:translateX(0)}
+    100%{transform:translateX(-50%)}
+}
+
+.main-header{
+    background:white;
+    border-bottom:1px solid #eee;
+}
+
+.header-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+    max-width:1400px;
+    margin:0 auto;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    letter-spacing:8px;
+}
+
+.header-icons{
+    display:flex;
+    gap:20px;
+    align-items:center;
+}
+
+.icon-btn{
+    width:40px;
+    height:40px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    text-decoration:none;
+}
+
+.icon-btn svg{
+    width:22px;
+    height:22px;
+    stroke:currentColor;
+    fill:none;
+    stroke-width:2;
+}
+
+.cart-icon{
+    position:relative;
+}
+
+.cart-icon span{
+    position:absolute;
+    top:-8px;
+    right:-8px;
+    background:#c60000;
+    color:white;
+    width:22px;
+    height:22px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:11px;
+    font-weight:bold;
+}
+
+.main-menu{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    padding:0 60px 20px;
+    max-width:1400px;
+    margin:0 auto;
+    flex-wrap:wrap;
+}
+
+.main-menu a{
+    text-decoration:none;
+    font-weight:bold;
+    color:#111;
+    position:relative;
+}
+
+.main-menu a::after{
+    content:'';
+    position:absolute;
+    bottom:-5px;
+    left:0;
+    width:0;
+    height:2px;
+    background:#111;
+    transition:.3s;
+}
+
+.main-menu a:hover::after{
+    width:100%;
+}
+
+footer,
+.simple-footer{
+    background:#111;
+    color:white;
+    padding:60px;
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:40px;
+    margin-top:60px;
+}
+
+footer h3,
+footer h4,
+.simple-footer h3,
+.simple-footer h4{
+    margin-bottom:15px;
+}
+
+footer a,
+.simple-footer a{
+    display:block;
+    color:#ccc;
+    text-decoration:none;
+    margin-bottom:10px;
+    transition:.2s;
+}
+
+footer a:hover,
+.simple-footer a:hover{
+    color:white;
+}
+
+footer p,
+.simple-footer p{
+    color:#ccc;
+    margin:10px 0;
+    line-height:1.6;
+}
+
+@media(max-width:1000px){
+    .header-top,
+    .main-menu{
+        padding:15px 20px;
+    }
+
+    footer,
+    .simple-footer{
+        grid-template-columns:1fr;
+    }
+}
